@@ -59,11 +59,8 @@ MCTS 的强大之处在于它能够在不完全展开整个搜索树的情况下
 
 为了更好地监控和分析训练过程，本项目集成了 [Weights & Biases (WandB)](https://wandb.ai/) 进行实验追踪和可视化。以下是训练过程中部分关键指标的图表，尽管结果不尽如人意，但它们反映了模型学习的动态过程和遇到的挑战：
 
-<details>
-  <summary>点击展开查看WandB图表示例</summary>
-  ![WandB Training Charts](images/charts.png)
-  <p>这张图表展示了在 $ 9 \times 9 $ 网格上进行训练时，诸如策略损失 (Policy Loss)、价值损失 (Value Loss)、熵 (Entropy) 和回合奖励 (Episode Rewards) 等指标随训练步数或回合数的变化。</p>
-</details>
+![WandB Training Charts](images/charts.png)
+这张图表展示了在 $ 9 \times 9 $ 网格上进行训练时，诸如策略损失 (Policy Loss)、价值损失 (Value Loss) 和总损失 (Total) 等指标随训练步数或回合数的变化。
 
 ## PolicyValueNet 介绍
 
@@ -181,3 +178,7 @@ python test.py
 *   **改进状态表示和神经网络架构：** 尝试更高效的棋盘状态编码方式，或更深/更复杂的网络结构。
 *   **分布式训练：** 探索使用Ray RLlib等框架进行分布式自我对弈，加速数据生成和训练过程。
 *   **引入人类经验数据：** 考虑结合专家棋谱进行预训练，加速学习过程。
+
+#### **代码仓库：**
+
+https://github.com/guokezhen999/gomoku_rl
